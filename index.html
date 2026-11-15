@@ -1,0 +1,373 @@
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sağlık Yarder | Sağlık ve Yardımlaşma Derneği</title>
+<style>
+:root {
+  --navy:#12364c;
+  --teal:#168e9d;
+  --light:#edf4f6;
+  --text:#263d4b;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:Arial,sans-serif;
+  background:#f5f8fa;
+  color:var(--text);
+}
+header{
+  background:var(--navy);
+  color:white;
+  padding:18px 6%;
+}
+.header-inner{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  flex-wrap:wrap;
+  gap:15px;
+}
+.brand{display:flex;align-items:center;gap:12px}
+.logo{
+  background:white;color:var(--teal);
+  width:53px;height:53px;border-radius:13px;
+  display:grid;place-items:center;
+  font-size:29px;
+}
+.brand h1{font-size:23px;margin:0}
+.brand small{color:#b9d5e2}
+nav{
+  background:#0d2b3d;
+  padding:0 6%;
+  display:flex;
+  gap:5px;
+  flex-wrap:wrap;
+}
+nav a{
+  color:white;text-decoration:none;
+  padding:17px 12px;
+  font-size:13px;
+}
+nav a:hover{background:var(--teal)}
+.hero{
+  margin:30px auto;
+  max-width:1200px;
+  padding:65px 35px;
+  border-radius:15px;
+  background:linear-gradient(110deg,#12364c,#168e9d);
+  color:white;
+}
+.hero h2{font-size:38px;max-width:600px}
+.hero p{font-size:17px;line-height:1.7;max-width:600px}
+.btn{
+  display:inline-block;
+  background:white;color:var(--navy);
+  border:0;border-radius:6px;
+  padding:13px 20px;
+  text-decoration:none;font-weight:bold;
+  cursor:pointer;
+}
+.container{max-width:1200px;margin:auto;padding:15px 20px}
+.section-title{
+  border-left:5px solid var(--teal);
+  padding-left:12px;color:var(--navy);
+  margin:30px 0 20px;
+}
+.grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
+}
+.card{
+  background:white;border-radius:10px;
+  overflow:hidden;
+  box-shadow:0 3px 15px #12364c12;
+}
+.card-content{padding:19px}
+.card h3{color:var(--navy);margin-top:5px}
+.card p{line-height:1.6;color:#60717c}
+.tag{color:var(--teal);font-size:12px;font-weight:bold}
+.date{font-size:12px;color:#89969d}
+.placeholder{
+  height:145px;
+  background:linear-gradient(135deg,#d5e7ec,#a7cbd3);
+  display:grid;place-items:center;
+  font-size:40px;color:#168e9d;
+}
+.announcement{
+  background:white;border-radius:8px;
+  padding:17px;margin:12px 0;
+  border-left:4px solid var(--teal);
+}
+footer{
+  margin-top:50px;background:var(--navy);
+  color:white;padding:40px 7%;
+}
+footer p{color:#c1d4dd}
+.admin{
+  position:fixed;bottom:18px;right:18px;
+  background:var(--teal);color:white;
+  padding:13px 19px;border:0;
+  border-radius:30px;cursor:pointer;
+  box-shadow:0 4px 15px #0003;
+}
+.admin-panel{
+  display:none;position:fixed;inset:0;
+  background:#0009;z-index:10;
+  justify-content:center;align-items:center;
+  padding:15px;
+}
+.panel{
+  background:white;border-radius:13px;
+  padding:25px;width:100%;max-width:450px;
+  max-height:90vh;overflow:auto;
+}
+.panel input,.panel textarea{
+  width:100%;padding:12px;margin:8px 0 15px;
+  border:1px solid #ccd6dc;border-radius:6px;
+}
+.panel button{
+  padding:11px 16px;border:0;border-radius:6px;
+  background:var(--teal);color:white;
+  cursor:pointer;margin:4px;
+}
+.close{background:#777!important}
+@media(max-width:750px){
+ .grid{grid-template-columns:1fr}
+ .hero{margin:15px;padding:35px 22px}
+ .hero h2{font-size:29px}
+ nav{gap:0}
+ nav a{padding:13px 8px;font-size:11px}
+ .brand h1{font-size:19px}
+}
+</style>
+</head>
+<body>
+
+<header>
+ <div class="header-inner">
+  <div class="brand">
+   <div class="logo">♥</div>
+   <div>
+    <h1>SAĞLIK YARDER</h1>
+    <small>SAĞLIK VE YARDIMLAŞMA DERNEĞİ</small>
+   </div>
+  </div>
+  <div>☎ İletişim</div>
+ </div>
+</header>
+
+<nav>
+ <a href="#">ANA SAYFA</a>
+ <a href="#kurumsal">KURUMSAL</a>
+ <a href="#haberler">HABERLER</a>
+ <a href="#duyurular">DUYURULAR</a>
+ <a href="#subeler">ŞUBELERİMİZ</a>
+ <a href="#galeri">GALERİ</a>
+ <a href="#iletisim">İLETİŞİM</a>
+</nav>
+
+<section class="hero">
+ <span>SAĞLIK YARDER</span>
+ <h2>Birlikte daha güçlü, birlikte daha sağlıklı.</h2>
+ <p>Sağlık çalışanları ve toplum için dayanışma, birlik ve hizmet anlayışıyla çalışıyoruz.</p>
+ <a class="btn" href="#kurumsal">BİZİ TANIYIN</a>
+</section>
+
+<main class="container">
+
+<section id="duyurular">
+ <h2 class="section-title">📢 Güncel Duyurular</h2>
+ <div id="announcementList"></div>
+</section>
+
+<section id="haberler">
+ <h2 class="section-title">📰 Son Haberler</h2>
+ <div class="grid" id="newsList"></div>
+</section>
+
+<section id="kurumsal">
+ <h2 class="section-title">Kurumsal</h2>
+ <div class="grid">
+  <article class="card"><div class="card-content">
+   <h3>Hakkımızda</h3>
+   <p>Derneğimizin kuruluş amacı, vizyonu ve misyonu.</p>
+  </div></article>
+  <article class="card"><div class="card-content">
+   <h3>Yönetim Kurulu</h3>
+   <p>Yönetim ve organizasyon bilgilerimiz.</p>
+  </div></article>
+  <article class="card"><div class="card-content">
+   <h3>Tüzüğümüz</h3>
+   <p>Derneğimizin kurumsal esasları.</p>
+  </div></article>
+ </div>
+</section>
+
+<section id="subeler">
+ <h2 class="section-title">Şubelerimiz ve Temsilciliklerimiz</h2>
+ <div class="card card-content">
+  <p>Şubelerimiz, bölge temsilciliklerimiz ve il temsilciliklerimiz hakkında bilgiler burada yayınlanacaktır.</p>
+ </div>
+</section>
+
+<section id="galeri">
+ <h2 class="section-title">Fotoğraf Galerisi</h2>
+ <div class="grid">
+  <div class="card"><div class="placeholder">📷</div><div class="card-content">Dernek faaliyetleri</div></div>
+  <div class="card"><div class="placeholder">🏥</div><div class="card-content">Sağlık çalışmaları</div></div>
+  <div class="card"><div class="placeholder">🤝</div><div class="card-content">Sosyal faaliyetler</div></div>
+ </div>
+</section>
+
+<section id="iletisim">
+ <h2 class="section-title">İletişim</h2>
+ <div class="card card-content">
+  <p>Sağlık Yarder ile iletişime geçmek için iletişim bilgileri buraya eklenecektir.</p>
+ </div>
+</section>
+
+</main>
+
+<footer>
+ <h2>SAĞLIK YARDER</h2>
+ <p>Sağlık ve Yardımlaşma Derneği</p>
+ <p>Birlikte daha güçlü, birlikte daha sağlıklı.</p>
+ <p>© 2026 Sağlık Yarder. Tüm hakları saklıdır.</p>
+</footer>
+
+<button class="admin" onclick="openAdmin()">⚙ Yönetim Paneli</button>
+
+<div class="admin-panel" id="adminPanel">
+ <div class="panel">
+  <h2>Sağlık Yarder Yönetim</h2>
+  <div id="loginArea">
+   <p>Yönetici şifresini girin.</p>
+   <input id="password" type="password" placeholder="Yönetici şifresi">
+   <button onclick="login()">Giriş Yap</button>
+   <button class="close" onclick="closeAdmin()">Kapat</button>
+  </div>
+  <div id="management" style="display:none">
+   <h3>Duyuru ekle</h3>
+   <input id="announcementTitle" placeholder="Duyuru başlığı">
+   <textarea id="announcementText" placeholder="Duyuru açıklaması"></textarea>
+   <button onclick="addAnnouncement()">Duyuru yayınla</button>
+   <hr>
+   <h3>Haber ekle</h3>
+   <input id="newsTitle" placeholder="Haber başlığı">
+   <textarea id="newsText" placeholder="Haber açıklaması"></textarea>
+   <button onclick="addNews()">Haber yayınla</button>
+   <hr>
+   <button onclick="logout()">Çıkış Yap</button>
+   <button class="close" onclick="closeAdmin()">Kapat</button>
+  </div>
+ </div>
+</div>
+
+<script>
+// DEMO: Bu şifre yalnızca yerel prototip içindir.
+// Gerçek yayında sunucu taraflı kimlik doğrulama kullanın.
+const DEMO_PASSWORD = "yarder2026";
+
+let announcements = JSON.parse(
+ localStorage.getItem("yarderAnnouncements") || "[]"
+);
+let news = JSON.parse(
+ localStorage.getItem("yarderNews") || "[]"
+);
+
+function render(){
+ document.getElementById("announcementList").innerHTML =
+ announcements.map((item,i)=>`
+ <div class="announcement">
+  <span class="tag">DUYURU</span>
+  <h3>${escapeHTML(item.title)}</h3>
+  <p>${escapeHTML(item.text)}</p>
+  <span class="date">${escapeHTML(item.date)}</span>
+  ${isLoggedIn ? `<button onclick="deleteAnnouncement(${i})">Sil</button>` : ""}
+ </div>`).join("") || "<p>Henüz duyuru eklenmedi.</p>";
+
+ document.getElementById("newsList").innerHTML =
+ news.map((item,i)=>`
+ <article class="card">
+  <div class="placeholder">📰</div>
+  <div class="card-content">
+   <span class="tag">HABER</span>
+   <h3>${escapeHTML(item.title)}</h3>
+   <p>${escapeHTML(item.text)}</p>
+   <span class="date">${escapeHTML(item.date)}</span>
+   ${isLoggedIn ? `<button onclick="deleteNews(${i})">Sil</button>` : ""}
+  </div>
+ </article>`).join("") || "<p>Henüz haber eklenmedi.</p>";
+}
+
+function escapeHTML(value){
+ return String(value).replace(/[&<>"']/g, c => ({
+  "&":"&amp;","<":"&lt;",">":"&gt;",
+  '"':"&quot;","'":"&#39;"
+ })[c]);
+}
+
+let isLoggedIn = false;
+
+function openAdmin(){
+ document.getElementById("adminPanel").style.display="flex";
+}
+function closeAdmin(){
+ document.getElementById("adminPanel").style.display="none";
+}
+function login(){
+ if(document.getElementById("password").value === DEMO_PASSWORD){
+  isLoggedIn=true;
+  document.getElementById("loginArea").style.display="none";
+  document.getElementById("management").style.display="block";
+  render();
+ }else alert("Şifre yanlış!");
+}
+function logout(){
+ isLoggedIn=false;
+ document.getElementById("loginArea").style.display="block";
+ document.getElementById("management").style.display="none";
+ document.getElementById("password").value="";
+ render();
+}
+function addAnnouncement(){
+ const title=document.getElementById("announcementTitle").value.trim();
+ const text=document.getElementById("announcementText").value.trim();
+ if(!title || !text)return alert("Alanları doldurun.");
+ announcements.unshift({title,text,date:new Date().toLocaleDateString("tr-TR")});
+ localStorage.setItem("yarderAnnouncements",JSON.stringify(announcements));
+ document.getElementById("announcementTitle").value="";
+ document.getElementById("announcementText").value="";
+ render();
+}
+function addNews(){
+ const title=document.getElementById("newsTitle").value.trim();
+ const text=document.getElementById("newsText").value.trim();
+ if(!title || !text)return alert("Alanları doldurun.");
+ news.unshift({title,text,date:new Date().toLocaleDateString("tr-TR")});
+ localStorage.setItem("yarderNews",JSON.stringify(news));
+ document.getElementById("newsTitle").value="";
+ document.getElementById("newsText").value="";
+ render();
+}
+function deleteAnnouncement(i){
+ if(!confirm("Duyuru silinsin mi?"))return;
+ announcements.splice(i,1);
+ localStorage.setItem("yarderAnnouncements",JSON.stringify(announcements));
+ render();
+}
+function deleteNews(i){
+ if(!confirm("Haber silinsin mi?"))return;
+ news.splice(i,1);
+ localStorage.setItem("yarderNews",JSON.stringify(news));
+ render();
+}
+render();
+</script>
+</body>
+</html>
